@@ -11,4 +11,4 @@ ADD zkGenConfig.sh $ZK_HOME/bin/
 RUN chmod 777 $ZK_HOME/bin/zkGenConfig.sh
 
 EXPOSE 2181 2888 3888
-ENTRYPOINT ["/bin/bash", "-c" , "zkGenConfig.sh && exec zkServer.sh start-foreground"]
+ENTRYPOINT ["/bin/bash", "-c" , "$ZK_HOME/bin/zkGenConfig.sh && exec $ZK_HOME/bin/zkServer.sh start-foreground"]
