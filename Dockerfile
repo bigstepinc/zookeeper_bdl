@@ -6,10 +6,6 @@ RUN chmod 777 /opt/init-docker.sh && \
   /opt/init-docker.sh 
 ENV ZK_HOME /opt/zookeeper-3.4.12
 
-# Add entrypoint
-ADD entrypoint.sh $ZK_HOME/bin/
-RUN chmod 777 $ZK_HOME/bin/entrypoint.sh
-
 # Add zkGenConfig file
 ADD zkGenConfig.sh $ZK_HOME/bin/
 RUN chmod 777 $ZK_HOME/bin/zkGenConfig.sh
