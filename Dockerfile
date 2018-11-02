@@ -1,8 +1,5 @@
 FROM ubuntu:16.04
 
-# Add versioning details
-ADD version.json /opt
-
 # Prepare the environment
 ADD init-docker.sh /opt
 RUN chmod 777 /opt/init-docker.sh && \
