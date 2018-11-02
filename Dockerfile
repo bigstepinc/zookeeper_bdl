@@ -12,5 +12,8 @@ RUN chmod 777 $ZK_HOME/bin/zkGenConfig.sh && \
   cd $ZK_HOME && \
   export PATH=$PATH:$ZK_HOME/bin
 
+# Add zkOk file
+ADD zkOk.sh $ZK_HOME/bin/
+
 EXPOSE 2181 2888 3888
 ENTRYPOINT ["/bin/bash", "-c" , "$ZK_HOME/bin/zkGenConfig.sh && exec $ZK_HOME/bin/zkServer.sh start-foreground"]
