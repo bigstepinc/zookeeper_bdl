@@ -1,4 +1,4 @@
-FROM xenial
+FROM ubuntu:16.04
 
 # Prepare the environment
 ADD init-docker.sh /opt
